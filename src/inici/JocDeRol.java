@@ -8,6 +8,9 @@ import java.util.Random;
 
 import Teclat.*;
 
+
+// Prova sincronització Git-Eclipse
+
 public class JocDeRol {
 
 	public static void main(String[] args) {
