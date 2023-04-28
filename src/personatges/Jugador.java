@@ -91,7 +91,7 @@ public class Jugador {
 	@Override
 	public String toString() {
 
-		return nom + "[" + equip.getNom() + "]" + "(" + this.getClass().getSimpleName().toUpperCase() + ", PA:"
+		return "\n" +nom + "[" + equip.getNom() + "]" + "(" + this.getClass().getSimpleName().toUpperCase() + ", PA:"
 				+ getPuntsAtac() + ", PD:" + getPuntsDefensa() + ", PV:" + vides + ") té els poders: ";
 
 	}

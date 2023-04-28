@@ -68,7 +68,7 @@ public class Equip {
 
 	@Override
 	public String toString() {
-		return "Equip: " + nom + "\n" + "\t" + "-" + jugadors;
+		return "\n" + "Equip: " + nom + "\t" + "-" + "\n" + jugadors;
 	}
 
 }

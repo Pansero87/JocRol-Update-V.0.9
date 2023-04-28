@@ -1,5 +1,7 @@
 package altres;
 
+import java.util.Objects;
+
 public class Poder {
 
 	private String nom;
@@ -7,7 +9,7 @@ public class Poder {
 	private int bonusAtac;
 	private int bonusDefensa;
 
-	// Getter setter 
+	// Getter setter
 	public int getBonusAtac() {
 		return bonusAtac;
 	}
@@ -25,6 +27,10 @@ public class Poder {
 	}
 
 	// Constructor
+	public Poder(String nom) {
+		super();
+		this.nom = nom;
+	}
 
 	public Poder(String nom, int bonusAtac, int bonusDefensa) {
 		super();
@@ -35,7 +41,24 @@ public class Poder {
 
 	@Override
 	public String toString() {
-		return nom + " (BA:" + bonusAtac + ", BD:" + bonusDefensa + ")";
+		return "\n" + nom + " (BA:" + bonusAtac + ", BD:" + bonusDefensa + ")";
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(nom);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Poder other = (Poder) obj;
+		return Objects.equals(nom, other.nom);
 	}
 
 }
